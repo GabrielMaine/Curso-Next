@@ -1,20 +1,15 @@
-import { mockProducts } from "@/data/products"
+'use client'
 import Image from "next/image"
 import CartCounter from "./CartCounter"
-import { mockCart } from "@/data/cart"
 
-const CartDetail = ({slug}) => {
-
-    const item = mockCart.find(item=>item.slug===slug)
-
-    const stock = mockProducts.find(item=>item.slug===slug).stock
+const CartDetail = ({item}) => {
 
     return (
         <div className="flex justify-between border-2 border-black p-2">
             <div className="flex flex-col justify-around px-5">
                 <h3>{item.title}</h3>
                 <span>Precio por unidad: ${item.price}</span>
-                <CartCounter initial={item.quantity} max={stock}/>
+                <CartCounter item={item}/>
             </div>
             <div className="">
                 <Image

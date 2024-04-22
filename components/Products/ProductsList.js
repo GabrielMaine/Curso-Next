@@ -1,8 +1,9 @@
-import { mockProducts } from "@/data/products"
 import ProductCard from "./ProductCard"
 
-const ProductsList = ({categoria}) => {
-    const items = categoria === 'todos' ? mockProducts : mockProducts.filter(item => item.type === categoria)
+const ProductsList = async ({categoria}) => {
+    const items = await fetch(`http://localhost:3000/api/Productos/${categoria}`,
+    {cache: "no-store"}
+    ).then(r=>r.json())
 
     return (
     <section className="container m-auto flex justify-center items-center gap-12 flex-wrap py-5 min-h-[calc(100vh-15rem)]">

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import CartWidget from '../Cart/CartWidget'
 
 const Navbar = () => {
   const links = [
@@ -22,10 +23,6 @@ const Navbar = () => {
     {
       label: "Admin",
       href: "/Admin"
-    },
-    {
-      label: "Carrito",
-      href: "/Carrito"
     },
   ]
 
@@ -53,6 +50,7 @@ const Navbar = () => {
             {link.label}
             </Link>
           })}
+          <CartWidget/>
         </div>
       </div>
     </header>

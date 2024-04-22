@@ -22,15 +22,15 @@ const Footer = () => {
                 <span>Lunes a Viernes 9 a 18hs</span><br/><span>Sabados 9 a 13hs</span>
               </div>
               <div>
-                <span>tecnotienda@gmail.com</span>
+                <span>Av. Pellegrini 1234 - Rosario, Santa Fe</span>
               </div>
               <div>
-                <span>Av. Pellegrini 1234 - Rosario, Santa Fe</span>
+                <span>tecnotienda@gmail.com</span>
               </div>
             </div>
           </div>
           <div>
-            <h2>Categorias</h2>
+            <h2 className="font-bold">Categorias</h2>
             <div className="flex flex-col align-start">
               {categories.map(e=>{
                 return <div key={e.label}>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h2>Institucionales</h2>
+            <h2 className="font-bold">Institucionales</h2>
             <div className="flex flex-col align-start">
               <div>
                 <Link href="/Nosotros">Nosotros</Link><br/>
@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="flex gap-3">
                 <p>Powered by</p>
                 <Image
-                    src={"/next.svg"}
+                    src={"/Icons/next.svg"}
                     alt="Next logo"
                     width={50}
                     height={50}

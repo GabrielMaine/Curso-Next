@@ -7,7 +7,7 @@ export async function generateMetadata({params, searchParams}, parent){
 
 const page = () => {
   return (
-    <main className="min-h-[calc(100vh-6.75rem)]">
+    <main className="min-h-[calc(100vh-15rem)]">
         <h1>Nosotros</h1>
     </main>
   )
