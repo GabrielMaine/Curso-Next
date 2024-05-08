@@ -8,7 +8,15 @@ export const mockProducts = [
         slug: "motorola-g23",
         image: "motorola_g23.webp",
         type: "celulares",
-        brand: "Motorola"
+        brand: "Motorola",
+        discount:{
+            status: true,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
     {
         title: "Celular Motorola E22",
@@ -18,7 +26,15 @@ export const mockProducts = [
         slug: "motorola-e22",
         image: "motorola_e22.webp",
         type: "celulares",
-        brand: "Motorola"
+        brand: "Motorola",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
     {
         title: "Celular Quantum Q03",
@@ -28,7 +44,15 @@ export const mockProducts = [
         slug: "quantum-q03",
         image: "quantum_q03.webp",
         type: "celulares",
-        brand: "Quantum"
+        brand: "Quantum",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
 
     // Notebooks
@@ -40,7 +64,15 @@ export const mockProducts = [
         slug: "asus-zenbook14",
         image: "asus_zenbook14.webp",
         type: "notebooks",
-        brand: "Asus"
+        brand: "Asus",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: true,
+            amount: 6
+        }
     },
     {
         title: "Notebook Asus Vivobook 15",
@@ -50,7 +82,15 @@ export const mockProducts = [
         slug: "asus-vivobook15",
         image: "asus_vivobook15.webp",
         type: "notebooks",
-        brand: "Asus"
+        brand: "Asus",
+        discount:{
+            status: true,
+            amount: 0.2
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
     {
         title: "Notebook Asus Tuf Gaming F15",
@@ -60,7 +100,15 @@ export const mockProducts = [
         slug: "asus-tufgamingf15",
         image: "asus_tufgamingf15.webp",
         type: "notebooks",
-        brand: "Asus"
+        brand: "Asus",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
 
     // Accesorios
@@ -72,7 +120,15 @@ export const mockProducts = [
         slug: "lenovo-xg02",
         image: "lenovo_xg02.webp",
         type: "accesorios",
-        brand: "Lenovo"
+        brand: "Lenovo",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
     {
         title: "Cable USB-C Belkin",
@@ -82,7 +138,15 @@ export const mockProducts = [
         slug: "belkin-usb-c",
         image: "belkin_usbc.webp",
         type: "accesorios",
-        brand: "Belkin"
+        brand: "Belkin",
+        discount:{
+            status: false,
+            amount: 0.1
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     },
     {
         title: "Funda para Laptop IBRS215",
@@ -92,5 +156,14 @@ export const mockProducts = [
         slug: "case-ibrs215",
         image: "case_ibrs215.webp",
         type: "accesorios",
+        brand: "Case Logic",
+        discount:{
+            status: true,
+            amount: 0.15
+        },
+        installments:{
+            status: false,
+            amount: 6
+        }
     }
 ];

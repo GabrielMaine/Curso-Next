@@ -1,32 +1,42 @@
 'use client'
-import { collection, addDoc} from "firebase/firestore";
-import { mockProducts } from "@/data/products";
-import { db } from "@/firebase/config";
-import AddProduct from "./AddProduct";
-import UpdateProduct from "./UpdateProduct";
-import DeleteProduct from "./DeleteProduct";
+import Link from "next/link"
+import LogoutButton from "../Auth/LogoutButton"
 
 const AdminMenu = () => {
-    const productsRef = collection(db, "productos");
 
-    const cargarProductos = () => {
-        mockProducts.forEach(producto => {
-            addDoc(productsRef, producto);
-        });
-    
-        console.log("Archivos cargados")
-    }
+    const links = [
+        {
+            href: "/Admin",
+            label: "Ver productos"
+        },
+        {
+            href: "/Admin/Crear",
+            label: "Crear producto"
+        },
+        {
+            href: "/Admin/Compras",
+            label: "Ver compras"
+        },
+    ]
 
     return (
-        <>
-            <h1 className="font-bold text-xl">Panel de control de Admin</h1>
-            <AddProduct/>
-            <UpdateProduct/>
-            <DeleteProduct/>
-        </>
-        // <div>
-        //     <button onClick={cargarProductos}>Cargar productos</button>
-        // </div>
+        <section className="bg-gray-100 py-2">
+            <div className="text-center">
+                <h1 className="font-bold text-2xl">Panel de control de Admin</h1>
+            </div>
+            <div className="flex justify-around mt-1">
+                {links.map(link=>{
+                return <Link
+                key={link.label}
+                href={link.href}
+                className={`border-2 border-black rounded bg-white text-black w-content px-2 py-1 mt-1 hover:bg-black hover:text-white`}
+                >
+                {link.label}
+                </Link>
+                })}
+                <LogoutButton/>
+            </div>
+        </section>
   )
 }
 

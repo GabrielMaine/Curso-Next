@@ -1,4 +1,4 @@
-import AdminMenu from "@/components/Admin/AdminMenu"
+import AdminProductList from "@/components/Admin/AdminProductList"
 
 export async function generateMetadata({params, searchParams}, parent){
 
@@ -9,9 +9,9 @@ export async function generateMetadata({params, searchParams}, parent){
   
   const page = () => {
       return (
-        <main className="min-h-[calc(100vh-15rem)] py-5 px-2">
-            <AdminMenu/>
-        </main>
+        <section className="min-h-[calc(100vh-15rem)] py-5 px-2">
+            <AdminProductList/>
+        </section>
       )
     }
     

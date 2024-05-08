@@ -32,7 +32,12 @@ export const CartProvider = ({children})=>{
     }
 
     const getTotal = () => {
-        return cart.reduce((acum, unItem) => acum + unItem.quantity * unItem.price, 0)
+        // return cart.reduce((acum, unItem) => acum + unItem.quantity * unItem.price, 0)
+        let total = 0
+        cart.map(item=>{
+            item.discount.status ? total+=item.quantity*item.price*(1-item.discount.amount) : total+=item.quantity*item.price
+        })
+        return total
     };
 
     const getQuantity = () => {

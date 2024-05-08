@@ -14,7 +14,7 @@ const CartDetail = ({item}) => {
             <div className="">
                 <Image
                 alt={item.image}
-                src={`/products/${item.image}`}
+                src={`${item.image}`}
                 width={150}
                 height={150}
                 style={{objectFit: "contain"}}
